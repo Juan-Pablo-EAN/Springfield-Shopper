@@ -1,11 +1,11 @@
 body {
-    background-color: gray;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
 
 nav {
-    background-color: wheat;
+    background-color: rgb(230, 230, 230);
     margin: 0;
     width: 100%;
     height: 50px;
@@ -14,6 +14,7 @@ nav {
     justify-content: center;
     position: fixed;
     z-index: 100;
+    box-shadow: 0px 1px 15px gray;
 }
 nav div {
     width: 20%;
@@ -82,10 +83,17 @@ nav div input {
     text-decoration: underline;
 }
 
+.textoInicial {
+    margin: 1%;
+    font-weight: bold;
+    font-size: larger   ;
+}
+
 .contenido {
     width: 100%;
     background-color: rgb(144, 194, 187);
-    padding: 1%;
+    padding: 3%;
+    padding-top: 1%;
 }
 
 .portada {
@@ -141,6 +149,7 @@ nav div input {
     width: 50%;
     text-align: right;
     font-size: 20px;
+    color: green;
 }
 
 .local {
@@ -166,4 +175,43 @@ nav div input {
 
 .imagen img {
    width: 100%;
+}
+
+.contenedor2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside {
+    width: 30%;
+    margin-left: 7%;
+    background-color: bisque;
+}
+
+.noticiaDerecha {
+    background-color: white;
+}
+
+aside img {
+    width: 100%;
+}
+
+aside div p {
+    font-size: 30px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 3%;
+}
+
+.noticia2 {
+    margin-top: 5%;
+}
+
+@media all and (max-width:1125px){
+
+}
+
+.contenidoInferior {
+    width: 100%;
+    display: flex;
 }
