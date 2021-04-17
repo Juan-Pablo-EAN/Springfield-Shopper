@@ -65,6 +65,12 @@ nav div input {
     justify-content: center;
 }
 
+@media screen and (max-width:730px){
+    .titulo span {
+        font-size: 50px;
+    }
+}
+
 .redes {
     width: 800px;
     width: inherit;
@@ -92,13 +98,13 @@ nav div input {
 .contenido {
     width: 100%;
     background-color: rgb(144, 194, 187);
-    padding: 3%;
+    padding: 1%;
     padding-top: 1%;
 }
 
 .portada {
-    width: 100%;
-    max-width: 750px;
+    width: 70%;
+    max-height: 815px;
     background-color: rgb(243, 243, 243);
     font-family: 'Times New Roman', Times, serif;
     padding: 2%;
@@ -158,6 +164,18 @@ nav div input {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+@media screen and (max-width:730px){
+    .local {
+        font-size: 30px;
+    }
+    .tituloPortada {
+        font-size: 20px;
+    }
+    .portada p {
+        font-size: 50%;
+    }
+}
+
 .textos {
     display: flex;
 }
@@ -166,6 +184,17 @@ nav div input {
     width: 19%;
     text-align: justify;
     padding: 2%;
+}
+
+.parrafo p {
+    word-wrap: break-word;
+    font-size: 100%;
+}
+
+@media screen and (max-width:700px){
+    .parrafo p {
+        font-size: 70%;
+    }
 }
 
 .imagen {
@@ -177,15 +206,28 @@ nav div input {
    width: 100%;
 }
 
+@media screen and (max-width:440px){
+    .textos {
+        flex-wrap: wrap;
+    }
+    .imagen {
+        width: 100%;
+        order: 1;
+    }
+    .parrafo {
+        width: 30%;
+        order: 2;
+    }
+}
+
 .contenedor2 {
     display: flex;
     flex-wrap: wrap;
 }
 
 aside {
-    width: 30%;
-    margin-left: 7%;
-    background-color: bisque;
+    width: 29%;
+    margin-left: 1%;
 }
 
 .noticiaDerecha {
@@ -197,21 +239,100 @@ aside img {
 }
 
 aside div p {
+    width: 100%;
     font-size: 30px;
     color: black;
     font-family: 'Times New Roman', Times, serif;
     padding: 3%;
 }
 
-.noticia2 {
-    margin-top: 5%;
-}
-
-@media all and (max-width:1125px){
-
-}
-
 .contenidoInferior {
     width: 100%;
     display: flex;
+}
+
+.contenidoInferior .noticiaInferior {
+    width: 25%;
+    margin: 2%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenidoInferior .noticiaInferior img {
+    width: 100%;
+    height: 200px;
+}
+
+.contenidoInferior .noticiaInferior p {
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    padding: 3%;
+}
+
+@media screen and (max-width:963px){
+    aside {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .noticiaDerecha {
+        width: 97%;
+        max-height: 300px;
+        display: flex;
+        margin: 1%;
+    }
+    .contenidoInferior{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .contenidoInferior .noticiaInferior, .portada {
+        width: 100%;
+    }
+    .contenidoInferior .noticiaInferior img, .noticiaDerecha img  {
+        width: 45%;
+        height: auto;
+    }
+    .contenidoInferior .noticiaInferior p, .noticiaDerecha p {
+        width: 55%;
+        font-size: 40px;
+    }
+    .contenidoInferior {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:530px){
+    .noticiaDerecha p, .contenidoInferior .noticiaInferior p {
+        font-size: 100%;
+    }
+}
+
+.tituloVideo {
+    margin-top: 3%;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.video {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.video iframe {
+    width: 100%;
+}
+
+.preciosSeccion {
+    width: 100%;
+    height: 400px;
+    margin-top: 5%;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
