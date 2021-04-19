@@ -5,7 +5,7 @@ body {
 }
 
 nav {
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(68, 68, 68);
     margin: 0;
     width: 100%;
     height: 50px;
@@ -15,6 +15,8 @@ nav {
     position: fixed;
     z-index: 100;
     box-shadow: 0px 1px 15px gray;
+    top:0;
+    left: 0;
 }
 nav div {
     width: 20%;
@@ -26,7 +28,7 @@ nav div {
 nav div a {
     width: 100%;
     font-size: larger;
-    color: black;
+    color: white;
 }
 
 nav div input {
@@ -326,27 +328,61 @@ aside div p {
     width: 100%;
 }
 
+.audio {
+    display: flex;
+    margin: 5%;
+    background-color: rgb(231, 233, 90);
+    left: 0;
+    padding: 5%;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.podcastTitulo {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2%;
+}
+
+.podcast {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.podcast audio {
+    width: 100%;
+    outline: none;  
+}
+
 .preciosSeccion {
     display: flex;
     width: 100%;
     margin-top: 5%;
-    height: 400px;
+    height: auto;
     flex-wrap: wrap;
 }
 
 .oferta {
     width: 50%;
-    align-items: center;
-    justify-content: center;
-    color: white;
+    background-image: url(https://www.lavanguardia.com/files/image_948_465/uploads/2019/12/11/5fa5316a6d007.png);
+}
+
+.oferta span {
+    background-color: rgba(141, 141, 141, 0.377);
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    font-size: 50px;
-    padding: 5%;
-    background-color: blueviolet;
+    font-size: 35px;
+    color: white;
+    flex-wrap: wrap;
+    text-shadow: 2px 2px 10px rgb(0 0 0);
 }
 
 .login {
@@ -354,8 +390,8 @@ aside div p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(145, 79, 206);
-    padding: 1%;
+    background-color: blueviolet;
+    padding: 3%;
     height: auto;
 }
 
@@ -369,7 +405,6 @@ aside div p {
 }
 
 .login .tituloLogin {
-    /* height: 20%; */
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
@@ -377,17 +412,14 @@ aside div p {
 
 .login .titulo2Login {
     font-size: 30px;
-    /* height: 14%; */
 }
 
 .login .titulo3Login {
     font-size: 15px;
-    /* height: 7%; */
 }
 
 .login form {
     width: 100%;
-    /* height: 63%; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -403,11 +435,91 @@ aside div p {
     margin: 3%;
 }
 
+.registro {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.registro .fondo {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(94, 94, 94, 0.397);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 10px rgb(0 0 0);
+}
+
+.registroTitulo {
+    width: 50%;
+    background-image: url(https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/noticias-cine/asi-hubiese-sido-springfield-el-spin-off-de-los-simpson/31368248-1-esl-ES/Asi-hubiese-sido-Springfield-el-spin-off-de-Los-Simpson.png?crop=1xw:0.7962674961119751xh;center,top&resize=980:*);
+}
+
+.registroTitulo, .oferta {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: padding-box;
+    background-position: center;
+}
+
+.registroDatos {
+    width: 50%;
+    background-color: cornflowerblue;
+    padding: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.registroDatos form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.registroDatos form input {
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+
+.registroDatos form label {
+    margin-top: 2%;
+}
+
+.registroDatos form input[type="submit"]{
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+}
+
 @media screen and (max-width:797px){
-    .oferta {
+    .oferta, .registroTitulo, .podcastTitulo, .login, .registroDatos, .podcast {
         width: 100%;
     }
-    .login {
-        width: 100%;
-    }
+}
+
+footer {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(255, 136, 0);
+    position: absolute;
+    left: 0;
+}
+
+.fondoFooter {
+    width: 100%;
+    height: inherit;
+    background-color: rgb(68, 68, 68);
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 200px;
 }
