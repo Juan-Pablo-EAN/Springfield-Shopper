@@ -326,6 +326,7 @@ aside div p {
 
 .video iframe {
     width: 100%;
+    border: none;
 }
 
 .audio {
