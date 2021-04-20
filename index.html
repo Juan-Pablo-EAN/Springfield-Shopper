@@ -14,14 +14,7 @@
     <title>Springfiel Shopper</title>
 </head>
 <!--
-    HTML--
-    sonido
     tabla
-    fecha
-    listas
-    CSS--
-    fondos
-    bordes
 -->
 
 <body>
@@ -29,16 +22,16 @@
         <header>
             <nav>
                 <div>
-                    <a><i class="fas fa-home"> Inicio</i></a>
+                    <a href="#"><i class="fas fa-home"> Inicio</i></a>
                 </div>
                 <div>
-                    <a><i class="fas fa-dollar-sign"> Precio</i></a>
+                    <a href="#precioss"><i class="fas fa-dollar-sign"> Precio</i></a>
                 </div>
                 <div>
-                    <a><i class="fas fa-indent"> Noticias</i></a>
+                    <a href="#noticias2"><i class="fas fa-indent"> Noticias</i></a>
                 </div>
                 <div>
-                    <a><i class="fas fa-calendar-week"> Hoy</i></a>
+                    <a href="#articulo"><i class="fas fa-calendar-week"> Hoy</i></a>
                 </div>
                 <div class="buscar">
                     <form action="https://google.com/">
@@ -49,7 +42,7 @@
             </nav>
         </header>
 
-        <section>
+        <section id="inicio">
             <div class="titulo">
                 <span>Springfiel Shopper</span>
             </div>
@@ -74,7 +67,7 @@
             <div class="contenido">
                 <div class="textoInicial"><span>Portada de hoy</span></div>
                 <div class="contenedor2">
-                    <article class="portada">
+                    <article class="portada" id="articulo">
                         <div class="encabezado">
                             <div class="uno"><span>#1</span></div>
                             <div class="tituloPortada">Springfiel Shopper</div>
@@ -140,7 +133,7 @@
                             <p>Anciano incontinente gana Miss Teen America</p>
                         </div>
                     </aside>
-                    <div class="contenidoInferior">
+                    <div class="contenidoInferior" id="noticias2">
                         <div class="noticiaInferior noticia3">
                             <img class="img-responsive" src="img/familia-simpson.png"
                                 alt="Los Simpsons con una canasta de dinero">
@@ -148,7 +141,7 @@
                         </div>
                         <div class="noticiaInferior noticia4">
                             <img class="img-responsive" src="img/borrachos-sin-alcohol.jpg" alt="Borrachos sin alcohol">
-                            <p>Alcohol prohibido en Springfiel</p>
+                            <p>Alcohol prohibido en Springfield</p>
                         </div>
                         <div class="noticiaInferior noticia5">
                             <img class="img-responsive" src="img/bart-cometa.jpg" alt="Borrachos sin alcohol">
@@ -190,7 +183,7 @@
                     </div>
                 </div>
             </div>
-            <div class="audio">
+            <div class="audio" id="podcastSection">
                 <div class="podcastTitulo">
                     <h1>
                         <b>Podcast:</b> A la familia Simpson les roban la navidad
@@ -200,7 +193,7 @@
                     <audio src="audio/noticia-los-simpsons.mp3" controls></audio>
                 </div>
             </div>
-            <div class="preciosSeccion">
+            <div class="preciosSeccion" id="precioss">
                 <div class="oferta">
                     <span class="text-center">
                         <strong>
@@ -210,7 +203,7 @@
                         
                     </span>
                 </div>
-                <div class="login text-center">
+                <div class="login text-center" id="inicioSesion">
                     <div class="tituloLogin">
                         <span>Springfiel Shopper</span>
                     </div>
@@ -243,7 +236,7 @@
                     </form>
                 </div>
             </div>
-            <div class="registro">
+            <div class="registro" id="registroSeccion">
                 <div class="registroTitulo">
                     <div class="fondo">
                         <span>Registrate aquí <i class="fas fa-arrow-right"></i></span>
@@ -270,10 +263,77 @@
         </section>
         <footer>
             <div class="fondoFooter">
-
+                <div class="tituloFooter">
+                    <h2>Springfield Shopper</h2>
+                </div>
+                <div class="seccionUno">
+                    <ul>
+                        <li>
+                            <a href="#noticias2">Noticias</a>
+                        </li>
+                        <li>
+                            <a href="#articulo">Noticia de hoy</a>
+                        </li>
+                        <li>
+                            <a href="#precioss">Precio</a>
+                        </li>
+                        <li>
+                            <a href="#podcastSection">Podcast</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="seccionDos">
+                    <ul>
+                        <li>
+                            <a href="#inicioSesion">Iniciar sesión</a>
+                        </li>
+                        <li>
+                            <a href="#registroSeccion">Registrate</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="seccionTres">
+                    <div class="siguenos">
+                        <h3>Siguenos en:</h3>
+                    </div>
+                    <div class="redesFooter">
+                        <ul>
+                            <li>
+                                <button class="btn btn-default btn-primary">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn btn-default btn-primary">
+                                    <i class="fab fa-instagram"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn btn-default btn-primary">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn btn-default btn-primary">
+                                    <i class="fab fa-whatsapp"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contactanos">
+                    <div class="tituloContact">
+                        <h2>Contáctanos</h2>
+                    </div>
+                    <div class="telefono">
+                        <span>Teléfono: </span></span><a href="tel:+573211231234" type="tel">+57 321 123 1234</a>
+                    </div>
+                    <div class="correo">
+                        <span>Correo: </span><a href="mailto:servicioalcliente@sshopper.com">servicioalcliente@sshopper.com</a>
+                    </div>
+                </div>
             </div>
         </footer>
     </div>
 </body>
-
 </html>
