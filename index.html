@@ -14,7 +14,7 @@
     <title>Springfiel Shopper</title>
 </head>
 <!--
-    tabla
+    9123107651
 -->
 
 <body>
@@ -34,9 +34,9 @@
                     <a href="#articulo"><i class="fas fa-calendar-week"> Hoy</i></a>
                 </div>
                 <div class="buscar">
-                    <form action="https://google.com/">
-                        <i class="fas fa-search"> <input type="text" placeholder="Busca en Google"
-                                autocomplete="name"></i>
+                    <form class="formulario" target="_blank" action="https://www.google.com/">
+                        <i class="fas fa-search" style="color:white"> <input class="buscador" type="text" placeholder="Busca en Google"
+                                autocomplete="name" style="color:black"></i>
                     </form>
                 </div>
             </nav>
@@ -193,14 +193,58 @@
                     <audio src="audio/noticia-los-simpsons.mp3" controls></audio>
                 </div>
             </div>
+            <div class="tablaPrecios">
+                <table>
+                    <tr class="tituloPrecios">
+                        <th colspan="3">Precios</th>
+                    </tr>
+                    <tr>
+                        <th>Periódico</th>
+                        <th>Suscripción</th>
+                        <th>Suscripción premium</th>
+                    </tr>
+                    <tr class="valores">
+                        <td>$2/cdu</td>
+                        <td>$50/mes</td>
+                        <td>$60/mes</td>
+                    </tr>
+                    <tr class="listas">
+                        <td>
+                            <ul>
+                                <li>Periodico (Consiguelo en el Kick-E-Mart de Apu</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Periodico diario a domicilio</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Periodico diario a domicilio</li>
+                                <li>Regalo sorpresa cada mes</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="botonesTabla">
+                        <td>
+                            <button class="btn btn-default btn-info">Consiguelo</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-default btn-info">Suscribete</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-default btn-info">Suscribete</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div class="preciosSeccion" id="precioss">
                 <div class="oferta">
                     <span class="text-center">
                         <strong>
-                            ¡Lleva el Springfiel Shopper por tan solo $2 <br>
-                            Consiguelo en el Kwik-E-Mart de Apu
+                            Accede a tu cuenta <i class="fas fa-arrow-right"></i>
                         </strong>
-                        
                     </span>
                 </div>
                 <div class="login text-center" id="inicioSesion">
@@ -329,11 +373,13 @@
                         <span>Teléfono: </span></span><a href="tel:+573211231234" type="tel">+57 321 123 1234</a>
                     </div>
                     <div class="correo">
-                        <span>Correo: </span><a href="mailto:servicioalcliente@sshopper.com">servicioalcliente@sshopper.com</a>
+                        <span>Correo: </span><a
+                            href="mailto:servicioalcliente@sshopper.com">servicioalcliente@sshopper.com</a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
