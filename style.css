@@ -99,7 +99,7 @@ nav div input {
 
 .portada {
     width: 70%;
-    max-height: 815px;
+    /* max-height: 815px; */
     background-color: rgb(243, 243, 243);
     font-family: 'Times New Roman', Times, serif;
     padding: 2%;
@@ -296,6 +296,10 @@ aside div p {
     }
     .contenidoInferior {
         padding: 0;
+    }
+    .portada {
+        height: auto;
+        margin-bottom: 5%;
     }
 }
 
