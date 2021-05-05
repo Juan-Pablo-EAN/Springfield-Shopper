@@ -215,20 +215,6 @@ nav div input {
    width: 100%;
 }
 
-@media screen and (max-width:440px){
-    .textos {
-        flex-wrap: wrap;
-    }
-    .imagen {
-        width: 100%;
-        order: 1;
-    }
-    .parrafo {
-        width: 30%;
-        order: 2;
-    }
-}
-
 .contenedor2 {
     display: flex;
     flex-wrap: wrap;
@@ -377,6 +363,128 @@ aside div p {
     margin-top: 5%;
     height: auto;
     flex-wrap: wrap;
+}
+
+.fechas {
+    background-color: rgb(231, 233, 90);
+    padding: 2%;
+    margin-top: 5%;
+}
+
+.inputF {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.inpt {
+    width: 70%;
+}
+
+.inputF .boton {
+    width: 30%;
+}
+
+.inputF .boton #buscar{
+    margin-left: 20px;
+    height: 50px;
+    background-color: aquamarine;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    padding: 2%;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.inputF .boton #buscar:hover {
+    background-color: rgb(115, 235, 195);
+}
+
+.inptFecha {
+    width: 95%;
+    height: 50px;
+    font-size: larger;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    margin: 2%;
+    padding: 7px;
+}
+
+@media screen and (Max-width:560px){
+    .inpt, .inputF .boton {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .inputF .boton .buscar{
+        margin-left: 0;
+    }
+}
+
+.fondoModal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(73, 73, 73, 0.39);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.modal {
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 1100;
+    display: block;
+    margin: auto;
+    overflow-y: scroll;
+    padding: 1%;
+}
+
+.modalClose {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    font-size: xx-large;
+    cursor: pointer;
+    z-index: 1110;
+}
+
+.portadaFecha {
+    width: auto;
+    height: 100%;
+}   
+
+.imagenPortada {
+    width: 50%;
+}
+
+.imagenPortada img {
+    width: 100%;
+}
+
+@media screen and (max-width:440px){
+    .textos {
+        flex-wrap: wrap;
+    }
+    .imagen, .imagenPortada {
+        width: 100%;
+        order: 1;
+    }
+    .parrafo {
+        width: 30%;
+        order: 2;
+    }
 }
 
 .tablaPrecios {
