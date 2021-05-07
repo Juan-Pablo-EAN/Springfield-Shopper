@@ -1,0 +1,16 @@
+section {
+    height: 400px;
+}
+
+.divSaludo{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.saludo {
+    font-family: sans-serif;
+    font-size: xx-large;
+    color: rgb(55, 148, 255);
+}
+

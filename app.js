@@ -99,6 +99,36 @@ class persona {
 
 const usuarios = [];
 
+const mailLogin = document.querySelector(".mailLogin");
+const passwLogin = document.querySelector(".passwLogin");
+const checkbox = document.querySelector(".checkLogin");
+const acceder = document.querySelector(".acceder");
+
+//para validar el inicio de sesión
+
+acceder.addEventListener("click", (e) => {
+    var accede = false;
+    for (user in usuarios) {
+        if (usuarios[user].correo === mailLogin.value && usuarios[user].contraseña === passwLogin.value) {
+            accede = true;
+            if (checkbox.checked) {
+                console.log(checkbox.value);
+                alert(`Bienvenido ${usuarios[user].nombre}`);
+                window.open(`sites/sesion.html?${usuarios[user].nombre}`);
+                break;
+            } else {
+                alert("Acepta térmimos y condiciones");
+            }
+        } else {
+            accede = false;
+            e.preventDefault();
+        }
+    }
+    if (accede === false) {
+        alert("Correo o contraseña incorrectos");
+    }
+})
+
 const nombre = document.querySelector(".nombreR");
 const apellido = document.querySelector(".apellidoR");
 const email = document.querySelector(".emailR");
@@ -109,10 +139,10 @@ const botonRegistro = document.querySelector(".registrarBtn");
 const ventana = document.querySelector(".fondoVentana");
 
 botonRegistro.addEventListener("click", (e) => {
-    if(passw1.value === passw2.value){
+    if (passw1.value === passw2.value) {
         registrar(nombre.value, apellido.value, email.value, fecha.value, passw1.value);
         ventanaModal(nombre.value, email.value);
-        e.preventDefault();
+        e.preventDefault(); //esto solo es porque no hay una base de datos 
     } else {
         alert("La contraseña no coincide");
         e.preventDefault();
@@ -145,8 +175,8 @@ const ventanaModal = (namePerson, mailPerson) => {
                 </p>
             </div>
             <div class="acepto"><button>Aceptar</button></div>`;
-            console.log(usuarios);
-            botonAceptar();
+    console.log(usuarios);
+    botonAceptar();
 }
 
 const inputs = [nombre, apellido, email, fecha, passw1, passw2]
@@ -154,7 +184,7 @@ const inputs = [nombre, apellido, email, fecha, passw1, passw2]
 const botonAceptar = () => {
     document.querySelector(".acepto").addEventListener("click", () => {
         ventana.style.display = "none";
-        for(let i = 0; i < inputs.length; i++){
+        for (let i = 0; i < inputs.length; i++) {
             inputs[i].value = "";
         }
     });
