@@ -25,6 +25,8 @@ window.addEventListener("scroll", () => {
     }
 });
 
+//para la seleccion de fechas
+
 const fondoModal = document.querySelector(".fondoModal");
 
 const noticias = [
@@ -81,6 +83,84 @@ const mostrarNoticia = (fecha) => {
     titulo.innerHTML = `${noticias[numero].title}`;
     imagen.innerHTML = `<img src="img/${noticias[numero].img}" alt="${numero}">`;
 }
+
+//registro de usuarios 
+
+class persona {
+
+    constructor(nombre, apellido, correo, nacimiento, contraseña) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.nacimiento = nacimiento;
+        this.contraseña = contraseña;
+    }
+}
+
+const usuarios = [];
+
+const nombre = document.querySelector(".nombreR");
+const apellido = document.querySelector(".apellidoR");
+const email = document.querySelector(".emailR");
+const fecha = document.querySelector(".fechaR");
+const passw1 = document.querySelector(".passR1");
+const passw2 = document.querySelector(".passR2");
+const botonRegistro = document.querySelector(".registrarBtn");
+const ventana = document.querySelector(".fondoVentana");
+
+botonRegistro.addEventListener("click", (e) => {
+    if(passw1.value === passw2.value){
+        registrar(nombre.value, apellido.value, email.value, fecha.value, passw1.value);
+        ventanaModal(nombre.value, email.value);
+        e.preventDefault();
+    } else {
+        alert("La contraseña no coincide");
+        e.preventDefault();
+    }
+});
+
+function registrar(name, lastname, mail, date, password) {
+    const usuario = new persona(name, lastname, mail, date, password);
+    usuarios.push(usuario);
+}
+
+const ventanaModal = (namePerson, mailPerson) => {
+    window.load
+    ventana.style.display = "flex";
+    document.querySelector(".ventanaRegistro").innerHTML = `
+            <div>
+                <h2>Springfield Shopper</h2>
+            </div>
+            <div>
+                <h2>
+                    <strong>Bienvenido ${namePerson}</strong>
+                </h2>
+            </div>
+            <div>
+                <h3>¡Has sido registrado con exito!</h3>
+            </div>
+            <div>
+                <p>
+                    <strong>Hemos enviado un mensaje a ${mailPerson} para que confirmes tu correo</strong>
+                </p>
+            </div>
+            <div class="acepto"><button>Aceptar</button></div>`;
+            console.log(usuarios);
+            botonAceptar();
+}
+
+const inputs = [nombre, apellido, email, fecha, passw1, passw2]
+
+const botonAceptar = () => {
+    document.querySelector(".acepto").addEventListener("click", () => {
+        ventana.style.display = "none";
+        for(let i = 0; i < inputs.length; i++){
+            inputs[i].value = "";
+        }
+    });
+}
+
+console.log(usuarios);
 
 //eventos para botones del footer
 
