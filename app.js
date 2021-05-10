@@ -1,14 +1,3 @@
-/**
- * alert
- * operadores de igualdad
- * operadores de incremento
- * if else
- * while
- * for
- * break
- * funciones
- */
-
 //efecto barra de navegacion
 
 const nav = document.querySelector(".barra");
@@ -59,7 +48,7 @@ const noticias = [
 
 document.querySelector(".modalClose").addEventListener("click", () => {
     fondoModal.style.display = "none";
-})
+});
 
 const dia = document.querySelector(".inptFecha");
 const buscar = document.getElementById("buscar");
@@ -82,7 +71,7 @@ const mostrarNoticia = (fecha) => {
     fechaPortada.innerHTML = fecha;
     titulo.innerHTML = `${noticias[numero].title}`;
     imagen.innerHTML = `<img src="img/${noticias[numero].img}" alt="${numero}">`;
-}
+};
 
 //registro de usuarios 
 
@@ -108,7 +97,7 @@ const acceder = document.querySelector(".acceder");
 
 acceder.addEventListener("click", (e) => {
     var accede = false;
-    for (user in usuarios) {
+    for (var user in usuarios) {
         if (usuarios[user].correo === mailLogin.value && usuarios[user].contraseña === passwLogin.value) {
             accede = true;
             if (checkbox.checked) {
@@ -126,7 +115,7 @@ acceder.addEventListener("click", (e) => {
     if (accede === false) {
         alert("Correo o contraseña incorrectos");
     }
-})
+});
 
 const nombre = document.querySelector(".nombreR");
 const apellido = document.querySelector(".apellidoR");
@@ -154,7 +143,7 @@ function registrar(name, lastname, mail, date, password) {
 }
 
 const ventanaModal = (namePerson, mailPerson) => {
-    window.load
+
     ventana.style.display = "flex";
     document.querySelector(".ventanaRegistro").innerHTML = `
             <div>
@@ -176,9 +165,9 @@ const ventanaModal = (namePerson, mailPerson) => {
             <div class="acepto"><button>Aceptar</button></div>`;
     console.log(usuarios);
     botonAceptar();
-}
+};
 
-const inputs = [nombre, apellido, email, fecha, passw1, passw2]
+const inputs = [nombre, apellido, email, fecha, passw1, passw2];
 
 const botonAceptar = () => {
     document.querySelector(".acepto").addEventListener("click", () => {
@@ -187,7 +176,7 @@ const botonAceptar = () => {
             inputs[i].value = "";
         }
     });
-}
+};  
 
 console.log(usuarios);
 
