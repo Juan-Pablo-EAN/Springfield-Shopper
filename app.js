@@ -113,7 +113,6 @@ acceder.addEventListener("click", (e) => {
             accede = true;
             if (checkbox.checked) {
                 console.log(checkbox.value);
-                alert(`Bienvenido ${usuarios[user].nombre}`);
                 window.open(`sites/sesion.html?${usuarios[user].nombre}`);
                 break;
             } else {
