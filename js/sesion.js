@@ -8,5 +8,3 @@ nombre = nombre.replace("%20", " ");
 const saludo = document.querySelector(".saludo");
 saludo.textContent = `Bienvenido ${nombre} al Springfield Shopper`;
 
-
-

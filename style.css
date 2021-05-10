@@ -309,6 +309,49 @@ aside div p {
     }
 }
 
+.nasa {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.nasa1 {
+    width: 500px;
+}
+
+.nasa2 {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3%;
+}
+
+.imagenNasa {
+    width: 100%;
+}
+
+.nasa2 .tituloNasa, .nasa2 .fechaNasa, .nasa2 .textoNasa {
+    width: 100%;
+    text-align: justify;
+}
+
+.tituloNasa h3 {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.fechaNasa span {
+    font-size: large;
+}
+
+.textoNasa {
+    margin-top: 20px;
+    font-size: large;
+}
+
 .tituloVideo {
     margin-top: 3%;
     font-weight: bold;

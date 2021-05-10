@@ -70,52 +70,28 @@ const mostrarNoticia = (fecha) => {
     fondoModal.style.display = "block";
     fechaPortada.innerHTML = fecha;
     titulo.innerHTML = `${noticias[numero].title}`;
-    imagen.innerHTML = `<img src="img/${noticias[numero].img}" alt="${numero}">`;
+    imagen.innerHTML = `
+    <img src="img/${noticias[numero].img}" alt="${numero}">
+    `;
 };
 
 //registro de usuarios 
 
 class persona {
 
-    constructor(nombre, apellido, correo, nacimiento, contraseña) {
+    constructor(nombre, apellido, correo, nacimiento, contrasena) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.nacimiento = nacimiento;
-        this.contraseña = contraseña;
+        this.contrasena = contrasena;
     }
 }
-
-const usuarios = [];
 
 const mailLogin = document.querySelector(".mailLogin");
 const passwLogin = document.querySelector(".passwLogin");
 const checkbox = document.querySelector(".checkLogin");
 const acceder = document.querySelector(".acceder");
-
-//para validar el inicio de sesión
-
-acceder.addEventListener("click", (e) => {
-    var accede = false;
-    for (var user in usuarios) {
-        if (usuarios[user].correo === mailLogin.value && usuarios[user].contraseña === passwLogin.value) {
-            accede = true;
-            if (checkbox.checked) {
-                console.log(checkbox.value);
-                window.open(`sites/sesion.html?${usuarios[user].nombre}`);
-                break;
-            } else {
-                alert("Acepta térmimos y condiciones");
-            }
-        } else {
-            accede = false;
-            e.preventDefault();
-        }
-    }
-    if (accede === false) {
-        alert("Correo o contraseña incorrectos");
-    }
-});
 
 const nombre = document.querySelector(".nombreR");
 const apellido = document.querySelector(".apellidoR");
@@ -125,6 +101,8 @@ const passw1 = document.querySelector(".passR1");
 const passw2 = document.querySelector(".passR2");
 const botonRegistro = document.querySelector(".registrarBtn");
 const ventana = document.querySelector(".fondoVentana");
+
+const usuarios = [];
 
 botonRegistro.addEventListener("click", (e) => {
     if (passw1.value === passw2.value) {
@@ -176,9 +154,31 @@ const botonAceptar = () => {
             inputs[i].value = "";
         }
     });
-};  
+}; 
 
-console.log(usuarios);
+//para validar el inicio de sesión
+
+acceder.addEventListener("click", (e) => {
+    var accede = false;
+    for (var user in usuarios) {
+        if (usuarios[user].correo === mailLogin.value && usuarios[user].contrasena === passwLogin.value) {
+            accede = true;
+            if (checkbox.checked) {
+                console.log(checkbox.value);
+                window.open(`sites/sesion.html?${usuarios[user].nombre}`);
+                break;
+            } else {
+                alert("Acepta térmimos y condiciones");
+            }
+        } else {
+            accede = false;
+            e.preventDefault();
+        }
+    }
+    if (accede === false) {
+        alert("Correo o contraseña incorrectos");
+    }
+});
 
 //eventos para botones del footer
 
@@ -201,4 +201,18 @@ botonTwtt.addEventListener("click", () => {
 
 botonWasp.addEventListener("click", () => {
     window.open("https://web.whatsapp.com/", "_blank");
+});
+
+//conexion con la API de la NASA
+
+fetch("https://api.nasa.gov/planetary/apod?api_key=BeO4hV6zUslD93eC5bWyUYcGvLG0QaFGGoido9UC")
+.then(response => response.json())
+.then(dato => {
+    document.querySelector(".imagenNasa").setAttribute("src", `${dato.url}`);
+    document.querySelector(".imagenNasa").setAttribute("title", `${dato.title}`);
+    document.querySelector(".imagenNasa").setAttribute("alt", `${dato.title}`);
+    document.querySelector(".fechaNasa").innerHTML = `<span>${dato.date}</span>`;
+    document.querySelector(".explicacion").innerText = `${dato.explanation}`;
+}).catch(err => {
+	console.error(err);
 });
