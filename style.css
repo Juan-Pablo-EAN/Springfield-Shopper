@@ -113,7 +113,6 @@ nav div input {
 
 .portada {
     width: 70%;
-    /* max-height: 815px; */
     background-color: rgb(243, 243, 243);
     font-family: 'Times New Roman', Times, serif;
     padding: 2%;
@@ -328,6 +327,21 @@ aside div p {
     display: flex;
     flex-wrap: wrap;
     padding: 3%;
+}
+
+@media screen and (max-width:870px){
+    .nasa {
+        flex-wrap: wrap;
+    }
+    .nasa1, .nasa2 {
+        width: 100%;
+    }
+    .nasa1 {
+        padding: 2%;
+    }
+    .nasa2 h3 {
+        text-align: left;
+    }
 }
 
 .imagenNasa {
